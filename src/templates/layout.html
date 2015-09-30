@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hapi-redis-sessions-example</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">hapi-redis-sessions-example</a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/public">Public</a></li>
+            <li><a href="/private">Private</a></li>
+
+          </ul>
+
+          <div class="navbar-right">
+            {{#if session.username}}
+              <p class="navbar-text">Logged in as {{session.username}}</p>
+              <a href="logout"><button type="button" class="btn btn-default navbar-btn">Log Out</button></a>
+            {{else}}
+              <a href="/login"><button type="button" class="btn btn-default navbar-btn">Log In</button></a>
+            {{/if}}
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container">
+      {{{content}}}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
