@@ -2,10 +2,10 @@
   "name": "hapi-redis-sessions-example",
   "version": "0.0.0",
   "dependencies": {
-    "catbox-redis": "~1.0.5",
-    "hapi-auth-cookie": "~3.1.0",
-    "vision": "~3.0.0",
-    "handlebars": "~4.0.3",
-    "hapi": "~10.1.0"
+    "catbox-redis": "~4.2.4",
+    "hapi-auth-cookie": "~10.0.0",
+    "vision": "~5.4.4",
+    "handlebars": "~4.1.2",
+    "hapi": "~18.1.0"
   }
 }
